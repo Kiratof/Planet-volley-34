@@ -13,9 +13,9 @@ function StartScreenState:update(dt)
     if love.keyboard.wasPressed('return') or love.keyboard.wasPressed('enter') then
         if highlighted == 1 then
             gStateMachine:change('serve', {
-                player1 = Paddle(PLAYER1_POSITION.x,  PLAYER1_POSITION.y, PLAYERS_RADIUS),
-                player2 = Paddle(PLAYER2_POSITION.x,  PLAYER2_POSITION.y, PLAYERS_RADIUS),
-                ball = Ball(BALL_PLAYER1_SERVING_POSITION.x, BALL_PLAYER1_SERVING_POSITION.y, 10),
+                player1 = Paddle('player1'),
+                player2 = Paddle('player2'),
+                ball = Ball(),
                 net = Net(NET.x , NET.y, NET.width, NET.height),
                 score = {
                     player1 = 0,

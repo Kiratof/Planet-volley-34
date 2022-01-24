@@ -1,9 +1,15 @@
 Ball = Class{}
 
-function Ball:init(x, y, radius)
-    self.x = x
-    self.y = y
-    self.radius = radius
+
+function Ball:init()
+    self.image = gTextures['moon']
+
+    self.width = self.image:getWidth()
+    self.height = self.image:getHeight()
+
+    self.x = BALL_PLAYER1_SERVING_POSITION.x
+    self.y = BALL_PLAYER1_SERVING_POSITION.y
+    self.radius = self.width * 0.5
 
     self.dx = 0
     self.dy = 0
@@ -103,9 +109,8 @@ function Ball:update(dt)
 end
 
 function Ball:render()
-    love.graphics.setColor(COLORS.grey)
-    love.graphics.circle('fill', self.x, self.y, self.radius)
-    love.graphics.setColor(COLORS.white)
+  
+    love.graphics.draw(self.image, self.x, self.y, 0, 1, 1, self.width * 0.5, self.height * 0.5 )
 
     -- ball ui feedback when it's to high
     if self.y < 0 then

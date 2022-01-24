@@ -1,9 +1,21 @@
 Paddle = Class{}
 
-function Paddle:init(x, y, radius)
-    self.x = x
-    self.y = y
-    self.radius = radius
+function Paddle:init(player)
+
+    if player == 'player1' then
+        self.image = gTextures['earth']
+        self.x = PLAYER1_POSITION.x
+        self.y = PLAYER1_POSITION.y
+    elseif player == 'player2' then
+        self.x = PLAYER2_POSITION.x
+        self.y = PLAYER2_POSITION.y
+        self.image = gTextures['mars']
+    end
+
+    self.width = self.image:getWidth()
+    self.height = self.image:getHeight()
+    self.radius = self.width * 0.5
+
     self.dy = 0
     self.dx = 0
 end
@@ -33,5 +45,5 @@ function Paddle:update(dt)
 end
 
 function Paddle:render()
-    love.graphics.circle('fill', self.x, self.y, self.radius)
+    love.graphics.draw(self.image, self.x, self.y, 0, 1, 1, self.width * 0.5, self.height * 0.5)
 end

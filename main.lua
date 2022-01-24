@@ -35,6 +35,13 @@ function love.load()
         ['small'] = love.graphics.newFont('fonts/font.ttf', 8)
     }
 
+    -- TEXTURES
+    gTextures = {
+        ['moon'] = love.graphics.newImage('images/ball-moon.png'),
+        ['mars'] = love.graphics.newImage('images/player-hearth.png'),
+        ['earth'] = love.graphics.newImage('images/player-mars.png')
+    }
+
     -- SOUND
     sounds = {
         ['paddle_hit'] = love.audio.newSource('sounds/paddle_hit.wav', 'static'),
