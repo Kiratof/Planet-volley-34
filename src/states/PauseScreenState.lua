@@ -38,6 +38,8 @@ end
 
 function PauseScreenState:render()
     
+    renderStars(stars)
+
     displayScore(self.score)
     self.player1:render()
     self.player2:render()

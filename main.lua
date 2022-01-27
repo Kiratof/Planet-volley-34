@@ -64,6 +64,9 @@ function love.load()
         ['victory'] = function() return VictoryScreenState() end,
         ['quit'] = function() return QuitScreenState() end
     }
+
+    stars = generateStars(100)
+
     gStateMachine:change('start')
 
     love.keyboard.keysPressed = {}

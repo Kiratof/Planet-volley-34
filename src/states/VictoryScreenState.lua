@@ -15,17 +15,7 @@ function VictoryScreenState:update(dt)
     if love.keyboard.wasPressed('return') or love.keyboard.wasPressed('enter') then
 
         if highlighted == 1 then
-            gStateMachine:change('serve', {
-                player1 = Paddle((VIRTUAL_WIDTH / 2) - 150, VIRTUAL_HEIGHT - 20, 20),
-                player2 = Paddle((VIRTUAL_WIDTH / 2) + 150, VIRTUAL_HEIGHT - 20, 20),
-                ball = Ball(BALL_PLAYER1_SERVING_POSITION.x, BALL_PLAYER1_SERVING_POSITION.y, 10),
-                net = Net(VIRTUAL_WIDTH / 2, VIRTUAL_HEIGHT  / 2, 5, 500),
-                score = {
-                    player1 = 0,
-                    player2 = 0
-                },
-                servingPlayer = 1
-            })
+            gStateMachine:change('start')
         elseif highlighted == 2 then
             gStateMachine:change('quit')
         end

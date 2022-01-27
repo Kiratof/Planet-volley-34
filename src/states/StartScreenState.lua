@@ -30,6 +30,9 @@ function StartScreenState:update(dt)
 end
 
 function StartScreenState:render()
+
+    renderStars(stars)
+
     love.graphics.setColor(COLORS.white)
 
     -- Title
@@ -50,4 +53,4 @@ function StartScreenState:render()
     end
     love.graphics.printf('QUIT', 0, 150, VIRTUAL_WIDTH, 'center')
     love.graphics.setColor(COLORS.white)
-end    
+end   

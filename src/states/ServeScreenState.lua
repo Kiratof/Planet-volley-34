@@ -77,7 +77,7 @@ function ServeScreenState:update(dt)
 end
 
 function ServeScreenState:render()
-
+    renderStars(stars)
     if self.score.player1 + self.score.player2 == 0 then 
         love.graphics.setFont(fonts['regular'])
         love.graphics.printf('Hit the ball to start !', 0, 64, VIRTUAL_WIDTH, 'center')

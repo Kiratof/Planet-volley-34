@@ -20,7 +20,7 @@ function PlayScreenState:update(dt)
             score = self.score,
             servingPlayer = self.servingPlayer,
             previousState = 'play'
-        })
+        })    
     end
 
     -- PLAYERs CONTROLS 
@@ -185,7 +185,9 @@ function PlayScreenState:update(dt)
 end
 
 function PlayScreenState:render()
- 
+
+    renderStars(stars)
+  
     displayScore(self.score)
 
     self.player1:render()

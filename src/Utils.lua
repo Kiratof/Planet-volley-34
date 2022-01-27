@@ -20,3 +20,23 @@ function displayFPS()
     love.graphics.print('FPS : ' .. tostring(love.timer.getFPS()), 10, 10)
     love.graphics.setColor(COLORS.white)
 end
+
+
+function generateStars(maxStars)
+    local stars = {}
+
+    for i = 1, maxStars do
+        local x = love.math.random(5, VIRTUAL_WIDTH - 5)
+        local y = love.math.random(5, VIRTUAL_HEIGHT - 5)
+        stars[i] = {x, y}
+    end
+
+    return stars
+end
+
+
+function renderStars(stars)
+    love.graphics.setColor(COLORS.dark)
+    love.graphics.points(stars)
+    love.graphics.setColor(COLORS.white)
+end
