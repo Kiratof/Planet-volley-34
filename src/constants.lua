@@ -31,7 +31,7 @@ NET = {
     height = 500
 }
 
-VICTORY_SCORE = 1
+VICTORY_SCORE = 3
 
 GRAVITY = 3
 

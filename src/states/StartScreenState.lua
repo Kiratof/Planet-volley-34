@@ -37,7 +37,7 @@ function StartScreenState:render()
 
     -- Title
     love.graphics.setFont(fonts['title'])
-    love.graphics.printf('Blobby Volley 34', 0, 64, VIRTUAL_WIDTH, 'center')
+    love.graphics.printf('Planet Volley 34', 0, 64, VIRTUAL_WIDTH, 'center')
 
     -- Start intruction text
     love.graphics.setFont(fonts['regular'])

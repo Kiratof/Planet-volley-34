@@ -20,7 +20,7 @@ function love.load()
 
     love.graphics.setDefaultFilter('nearest', 'nearest')
 
-    love.window.setTitle('Blobby Volley 34 !')
+    love.window.setTitle('Planet Volley 34 !')
 
     -- randomseed
     math.randomseed(os.time())
@@ -28,7 +28,7 @@ function love.load()
     -- FONT
     -- main
     fonts = {
-        ['score'] = love.graphics.newFont('fonts/font.ttf', 250),
+        ['score'] = love.graphics.newFont('fonts/font.ttf', 32),
         ['title'] = love.graphics.newFont('fonts/font.ttf', 32),
         ['large'] = love.graphics.newFont('fonts/font.ttf', 20),
         ['regular'] = love.graphics.newFont('fonts/font.ttf', 15),
